@@ -137,7 +137,7 @@ button:disabled {
 .card img,
 .card .thumb-fallback {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
   object-fit: cover;
   display: block;
   border-radius: calc(var(--radius-xl) - 6px);
