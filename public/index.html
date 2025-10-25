@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Artist Recommender — TasteDive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Artist Recommender</h1>
+        <p class="tag">Type an artist and get similar artists via TasteDive.</p>
+        <form id="searchForm">
+          <input
+            id="query"
+            type="search"
+            placeholder="Try: Justin Bieber, Taylor Swift, Michael Jackson, …"
+            autocomplete="on"
+          />
+          <button type="submit">Get recommendations</button>
+        </form>
+        <div id="status" class="hint"></div>
+      </header>
+
+      <section id="results" class="results"></section>
+
+      <footer>
+        <p class="hint">
+          Recommendations via TasteDive. Images via
+          <a
+            href="https://www.mediawiki.org/wiki/REST_API"
+            target="_blank"
+            rel="noopener"
+            >Wikipedia REST API</a
+          >.
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="/app.js?v=13"></script>
+  </body>
+</html>

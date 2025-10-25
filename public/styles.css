@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #0a36d1;
+  --ink: #eef3ff;
+  --ink-dim: #c8d4ff;
+  --yellow: #f0f230;
+  --card-bg: #ffffff;
+  --card-ink: #1b2240;
+  --card-dim: #7a84a5;
+  --badge-bg: #e7f0ff;
+  --badge-ink: #2b5bd8;
+  --border: #dfe5f6;
+  --border-dark: #ccd6f3;
+  --shadow: 0 10px 30px rgba(6, 25, 104, 0.25);
+  --radius-xl: 18px;
+  --radius-lg: 14px;
+  --radius-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.55 "Fredoka", "Poppins", system-ui, -apple-system, Segoe UI,
+    Roboto, sans-serif;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 36px 24px 48px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  color: #fffb75;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.12);
+}
+.tag {
+  margin: 8px 0 16px;
+  color: var(--ink);
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+form#searchForm {
+  margin: 12px auto 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  max-width: 720px;
+}
+input[type="search"] {
+  padding: 16px 18px;
+  border-radius: 999px; /* pill */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--ink);
+  outline: none;
+  transition: box-shadow 0.15s ease, background 0.15s ease,
+    border-color 0.15s ease;
+  backdrop-filter: blur(6px);
+}
+input[type="search"]::placeholder {
+  color: var(--ink-dim);
+}
+input[type="search"]:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.12);
+}
+button {
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--yellow);
+  color: var(--yellow-ink);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+  transition: transform 0.06s ease, box-shadow 0.06s ease, filter 0.15s ease;
+}
+button:hover {
+  filter: brightness(0.98);
+}
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#status {
+  margin: 8px auto 0;
+  max-width: 720px;
+  color: var(--ink-dim);
+  font-weight: 500;
+  text-align: left;
+}
+
+.results {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--card-ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+  box-shadow: var(--shadow);
+}
+
+.card img,
+.card .thumb-fallback {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  border-radius: calc(var(--radius-xl) - 6px);
+  background: #dfe6ff;
+}
+
+.card h3 {
+  margin: 4px 0 0;
+  font-size: 18px;
+  color: var(--card-ink);
+}
+.badges,
+.badge {
+  display: none !important;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  color: var(--card-ink);
+  background: #f2f6ff;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+.links a:hover {
+  filter: brightness(0.97);
+  transform: translateY(-1px);
+}
+
+.links a[href*="youtube"],
+.links a[href*="youtu"] {
+  background: #ff0000;
+  color: white;
+  border-color: #d20000;
+}
+
+.links a:last-child {
+  background: var(--yellow);
+  color: var(--yellow-ink);
+  border-color: color-mix(in oklab, var(--yellow) 70%, #000 12%);
+}
+
+.links a[href*="wiki"] {
+  background: #e8f0ff;
+  color: #0c3bc4;
+  border-color: #c9d9ff;
+}
+
+footer {
+  margin: 36px 0 8px;
+  text-align: center;
+  color: var(--ink-dim);
+}
+footer a {
+  color: #fffb75;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  form#searchForm {
+    grid-template-columns: 1fr;
+  }
+  #status {
+    text-align: center;
+  }
+}
