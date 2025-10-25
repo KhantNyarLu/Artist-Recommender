@@ -107,7 +107,7 @@ function toCardHTML(item) {
   const imgEl = img
     ? `<img src="${img}" alt="${escapeHTML(
         name
-      )}" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#dfe6ff;">`
+      )}" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;background:#dfe6ff;">`
     : `<div class="thumb-fallback" aria-label="No image" role="img"></div>`;
 
   return `
