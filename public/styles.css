@@ -89,7 +89,7 @@ button {
   border-radius: 999px;
   border: 0;
   background: var(--yellow);
-  color: var(--yellow-ink);
+  color: #0a1430;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
